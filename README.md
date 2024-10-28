@@ -31,7 +31,7 @@ The key feature of the backend are placed in the `view.py` file of the GDSC fold
 
 ## API Endpoints
 
-1. **`/item/create`**: Accepts user profiling data, creates a structured prompt, and saves it for subsequent use.
+1. **`/item/form`**: Accepts user profiling data, creates a structured prompt, and saves it for subsequent use.
 2. **`/journey`**: Uses profiling data and document content to generate a customized learning journey.
 3. **`/exercise`**: Creates exercises based on the user's profile and document content for knowledge assessment.
 
