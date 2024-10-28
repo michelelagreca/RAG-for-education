@@ -20,10 +20,10 @@ The key feature of the backend are placed in the `view.py` file of the GDSC fold
 ---
 
 ## Backend Workflow
-1. **User Profile Submission**: The frontend sends a POST request to the backend with user profiling data (age, study goals, methods, etc.).
+1. **User Profile Submission**: The frontend sends a POST request to the backend endpoint `item/form/` with user profiling data (age, study goals, methods, etc.).
 2. **PDF Document Processing**: A PDF containing the external knowledge base is processed, split into chunks, embedded, and stored in a FAISS vector store.
-3. **Conversation Chain**: Using the user profile and FAISS-powered knowledge retrieval, a customized study journey or exercise prompt is generated.
-4. **LLM Query**: The ChatGPT model is used to generate study paths or exercises based on user-specific prompts and the document's content.
+3. **Context Generation**: Using the user profile and FAISS-powered knowledge retrieval, a context is generated. By calling endpoints `journey/` and `exercises/` a customized study journey or exercise prompt is generated.
+4. **LLM Queryn and Conversation Chain**: The ChatGPT model is used to generate study paths or exercises based on user-specific prompts and the document's content by calling endpoints `journey/` and `exercises/`.
 5. **JSON Output**: Responses from the model are converted into JSON format for ease of use by the frontend.
 
 ---
